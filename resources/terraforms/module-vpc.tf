@@ -18,6 +18,10 @@ module "vpc" {
     worker_subnet_b = <cdir value>
     worker_subnet_c = <cdir value>
 
+    bastion_subnet_a = <cdir value>
+    bastion_subnet_b = <cdir value>
+    bastion_subnet_c = <cdir value>
+
     elb_subnet_a = <cdir value>
     elb_subnet_b = <cdir value>
     elb_subnet_c = <cdir value>
@@ -39,6 +43,10 @@ module "vpc" {
     worker_subnet_az_a  = "${var.aws_account.default_region}a"
     worker_subnet_az_b  = "${var.aws_account.default_region}b"
     worker_subnet_az_c  = "${var.aws_account.default_region}c"
+
+    bastion_subnet_az_a  = "${var.aws_account.default_region}a"
+    bastion_subnet_az_b  = "${var.aws_account.default_region}b"
+    bastion_subnet_az_c  = "${var.aws_account.default_region}c"
 
     elb_subnet_az_a  = "${var.aws_account.default_region}a"
     elb_subnet_az_b  = "${var.aws_account.default_region}b"
