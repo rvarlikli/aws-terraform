@@ -10,7 +10,7 @@ CLUSTER_NAME := coreos-cluster
 
 # For get-ami.sh
 COREOS_UPDATE_CHANNE=beta
-AWS_REGION=us-west-2
+AWS_REGION=eu-west-1
 VM_TYPE=hvm
 
 # Working Directories
@@ -46,7 +46,7 @@ TF_DESTROY := terraform destroy -force
 
 export
 
-all: worker
+all: worker bastion
 
 help:
 	@echo "Usage: make (<resource> | destroy_<resource> | plan_<resource> | refresh_<resource> | show | graph )"
@@ -62,6 +62,7 @@ destroy_all: \
 	destroy_admiral \
 	destroy_dockerhub \
 	destroy_worker \
+	destroy_bastion \
 	destroy_etcd \
 	destroy_elb \
 	destroy_rds \
